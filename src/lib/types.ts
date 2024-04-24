@@ -19,4 +19,4 @@ export type DriversRecords = {
   accidents: boolean;
   convictions: boolean;
   suspensions: boolean;
-}
+};
