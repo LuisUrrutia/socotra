@@ -24,7 +24,7 @@ export const Primary: Story = {
 
 export const Secondary: Story = {
   args: {
-    steps: 5,
-    currentStep: 3,
+    steps: 10,
+    currentStep: 5,
   },
 };
