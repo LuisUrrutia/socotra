@@ -20,3 +20,8 @@ export type DriversRecords = {
   convictions: boolean;
   suspensions: boolean;
 };
+
+export type AboutYourselfFormProps = {
+  name: string;
+  birth: Date;
+};
