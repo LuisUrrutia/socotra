@@ -7,6 +7,7 @@ const config = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
+    './stories/**/*.{js,ts,jsx,tsx}',
 	],
   prefix: "",
   theme: {
@@ -27,6 +28,7 @@ const config = {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          darker: "hsl(var(--primary-darker))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
