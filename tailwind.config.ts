@@ -54,6 +54,17 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        stepper: {
+          background: "hsl(var(--stepper-background))",
+          foreground: "hsl(var(--stepper-foreground))",
+          border: "hsl(var(--stepper-border))",
+
+          active: {
+            foreground: "hsl(var(--stepper-active-foreground))",
+            background: "hsl(var(--stepper-active-background))",
+            border: "hsl(var(--stepper-active-border))",
+          }
+        }
       },
       borderRadius: {
         lg: "var(--radius)",
