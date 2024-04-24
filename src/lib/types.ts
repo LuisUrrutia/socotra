@@ -14,3 +14,9 @@ export type Driver = {
   lastName: string;
   licenseNumber: string;
 };
+
+export type DriversRecords = {
+  accidents: boolean;
+  convictions: boolean;
+  suspensions: boolean;
+}
