@@ -28,3 +28,4 @@ export type AboutYourselfFormProps = {
 
 export type VehicleFormProps = Partial<Omit<Vehicle, 'id'>>;
 export type DriverFormProps = Partial<Omit<Driver, 'id'>>;
+export type DriversRecordsFormProps = DriversRecords;
