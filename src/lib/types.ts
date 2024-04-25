@@ -25,3 +25,5 @@ export type AboutYourselfFormProps = {
   name: string;
   birth: Date;
 };
+
+export type VehicleFormProps = Partial<Omit<Vehicle, 'id'>>;

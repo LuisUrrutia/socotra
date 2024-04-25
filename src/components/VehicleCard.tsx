@@ -4,7 +4,7 @@ import { DetailsCard } from "./DetailsCard";
 
 export const VehicleCard = ({
   vehicle,
-  variant,
+  variant = "primary",
   onClick,
 }: {
   vehicle: Vehicle;
