@@ -3,12 +3,14 @@
 import { useState } from "react";
 import { Stepper } from "@/components/Stepper";
 import { AboutYourselfForm } from "@/components/forms/AboutYourselfForm";
-import { AboutYourselfFormProps, Vehicle } from "@/lib/types";
+import { AboutYourselfFormProps, Driver, Vehicle } from "@/lib/types";
 import { VehiclesForm } from "@/components/forms/VehiclesForm";
+import { DriversForm } from "@/components/forms/DriversForm";
 
 type Form = {
   aboutYourself?: AboutYourselfFormProps;
   vehicles?: Vehicle[];
+  drivers?: Driver[];
 };
 
 export const Wizard = ({}) => {
@@ -25,11 +27,17 @@ export const Wizard = ({}) => {
     setStep(2);
   };
 
+  const handleDrivers = (data: Driver[]) => {
+    setForm({ ...form, drivers: data });
+    setStep(3);
+  };
+
   return (
     <div className="flex flex-col mx-auto w-2/4 gap-12">
       <Stepper steps={4} currentStep={step} />
       {step === 0 && <AboutYourselfForm onContinue={handleAboutYourself} />}
       {step === 1 && <VehiclesForm onContinue={handleVehicles} />}
+      {step === 2 && <DriversForm onContinue={handleDrivers} />}
     </div>
   );
 };

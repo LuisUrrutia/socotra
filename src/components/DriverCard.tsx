@@ -4,7 +4,7 @@ import { UserIcon } from "./icons/User";
 
 export const DriverCard = ({
   driver,
-  variant,
+  variant = "primary",
   onClick,
 }: {
   driver: Driver;
