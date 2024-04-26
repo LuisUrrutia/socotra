@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Socotra Car Insurance Work Test
+
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) and enriched with [Shadcn/UI](https://ui.shadcn.com/).
+
+[Storybook](https://storybook.js.org/) has been utilized in this project as a tool for viewing components during development and for sharing with the design team. In a real-world scenario, we could benefit from the [Figma Storybook plugin](https://www.figma.com/community/plugin/1056265616080331589/storybook-connect) to export components directly to Figma, facilitating rapid prototyping.
+
+This project was built using [Node 20](https://nodejs.org/en), and includes .nvmrc and .tool-versions files to facilitate compatibility with version managers such as [nvm](https://github.com/nvm-sh/nvm), [asdf](https://asdf-vm.com/), and [mise](https://mise.jdx.dev/).
 
 ## Getting Started
 
-First, run the development server:
+First, install all dependencies:
+```bash
+pnpm install
+```
+
+Then run the development server:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
 pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## Notes
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- The requirements did not specify the deletion functionality for vehicles and drivers, nor the ability to navigate backwards in the wizard. Due to the limited timeframe, I focused strictly on meeting the Figma specifications and chose not to implement these features, although I did recognize potential areas for enhancement.
+- I initially considered using server-side rendering (SSR) for the project, which led me to skip state managers like Redux or Zustand. However, due to time constraints, I shifted to using purely client-side components. Similarly, I opted not to use libraries like react-hook-form for this reason.
+- I thought about implementing unit tests with Jest and end-to-end testing with Playwright, but due to the limited timeframe, I did not prioritize these aspects.
+- I showcased Storybook to illustrate that, if it's not already in use on Socotra, I would implement it or utilize it extensively. This is because Storybook allows for the export of components to Figma via the Chromatic plugin, which can significantly reduce prototyping time for both designers and developers.
+- I utilized AI tools to assist with coding, such as Copilot, and also employed ChatGPT to generate basic logic for calculating insurance costs.
+- I observed that your Figma designs use tokens and also incorporate Tailwind (as indicated by the color naming convention). Consequently, I implemented Shadcn, which is based on Tailwind components. I attempted to export tokens from Figma, but the necessary library was absent, preventing me from doing so. Therefore, I maintained the design consistency using CSS variables and the Tailwind configuration to demonstrate my experience working with design tokens.
+- I didn't implement form error feedback or more complex validation logic, such as ensuring the vehicle year is later than the first car's year and no later than the current year, because I focused on the existing requirements. However, given more time, I would have addressed these enhancements.
